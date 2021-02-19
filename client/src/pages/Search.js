@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import '../App.css';
 import BookSearch from '../components/BookSearch';
 import API from "../utils/API";
+import { List } from "../components/List";
+import Card from "../components/Card";
 
 class Search extends Component {
     state = {
