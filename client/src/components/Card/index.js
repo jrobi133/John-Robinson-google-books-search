@@ -45,3 +45,5 @@ const Card = ({
         </ListItem>
     )
 }
+
+export default Card;

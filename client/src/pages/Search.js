@@ -71,8 +71,28 @@ class Search extends Component {
                 handleFormSubmit={this.handleFormSubmit}
                 q={this.state.q}
             />
+            <div className='container' style={{ marginTop: '3em'}}>
+                <h4>Results</h4>
+                <List>
+                    {this.state.books.map((book) => (
+                        <Card
+                        key={book.id}
+                        title={book.volumeInfo.title}
+                        subtitle={book.volumeInfo.subtitle}
+                        link={book.volumeInfo.infoLink}
+                        authors={book.volumeInfo.authors}
+                        image={book.volumeInfo.imageLinks.thumbnail}
+                        description={book.volumeInfo.description}
+                        Button={() => (
+                            <button
+                            onClick={() => this.handleBookSave(book.id)}
+                            className='btn btn-outline-secondary heading-subtitle ml-2'>Save</button>
+                        )} />
+                    ))}
+                </List>
+            </div>
             </>
-        )
+        );
     }
 }
 
