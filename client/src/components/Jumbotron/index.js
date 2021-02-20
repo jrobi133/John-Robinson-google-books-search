@@ -5,7 +5,7 @@ class Jumbotron extends Component {
     return (
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <h1 className="display-4">Reach Google Books Search</h1>
+          <h1 className="display-4">React Google Books Search</h1>
           <p className="lead">Search for and Save Books of Interest</p>
         </div>
       </div>
