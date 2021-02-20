@@ -9,7 +9,7 @@ class Search extends Component {
     state = {
         books: [],
         savedBooks: [],
-        i: "",
+        q: "",
     };
 
     handleInputChange = (event) => {
@@ -18,7 +18,7 @@ class Search extends Component {
     };
 
     getBooks = () => {
-        API.getBooks(this.state.i)
+        API.getBooks(this.state.q)
         .then((res) => {
             this.setState({
                 books: res.data,

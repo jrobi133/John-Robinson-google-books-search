@@ -1,6 +1,6 @@
 import React from "react";
 
-function BookSearch({ handleInputChange, i, handleFormSubmit }) {
+function BookSearch({ handleInputChange, q, handleFormSubmit }) {
     return (
         <div className="container">
             <div>
@@ -9,7 +9,7 @@ function BookSearch({ handleInputChange, i, handleFormSubmit }) {
             <form>
                 <div className="form-group">
                     <label htmlFor="searchInput">Books</label>
-                    <input type="text" className="form-control" id="searchInput" value={i} name='i' onChange={handleInputChange}/>
+                    <input type="text" className="form-control" id="searchInput" value={q} name='q' onChange={handleInputChange}/>
                 </div>
                 <button type="submit" className='btn btn-success' onClick={handleFormSubmit}>Search</button>
             </form>

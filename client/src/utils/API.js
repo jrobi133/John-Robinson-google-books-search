@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
     getBooks: function (query) {
-        const params = { i:query };
+        const params = { q:query };
         return axios.get("/api/search", {params});
     },
     getSavedBooks: function () {
