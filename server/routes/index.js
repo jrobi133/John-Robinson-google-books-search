@@ -1,10 +1,12 @@
 const path = require("path");
 const router = require("express").Router();
+const apiRoutes = require("./api");
 
-const savedRoutes = require("./savedRoutes");
-const searchRoutes = require("./searchRoutes");
+router.use("/api", apiRoutes);
 
-router.use("/books", savedRoutes);
-router.use("/search", searchRoutes);
+router.use((req, res) =>
+  res.sendFile(path.join(__dirname, "../front-end/public/index.html"))
+);
 
 module.exports = router;
+
